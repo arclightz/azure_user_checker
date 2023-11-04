@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Analysis Report</title>
+</head>
+<body>
+    <h1>User Analysis Report</h1>
+
+    <h2>Active Users:</h2>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Status</th>
+        </tr>
+        {% for user in active_users %}
+            <tr>
+                <td>{{ user[0] }}</td>  <!-- Access the first name using user[0] -->
+                <td>{{ user[1] }}</td>  <!-- Access the last name using user[1] -->
+                <td>{{ user[2] }}</td>  <!-- Access the status using user[2] -->
+            </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Users Not Found:</h2>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        {% for user in not_found_users %}
+            <tr>
+                <td>{{ user[0] }}</td>  <!-- Access the first name using user[0] -->
+                <td>{{ user[1] }}</td>  <!-- Access the last name using user[1] -->
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

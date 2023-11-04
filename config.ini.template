@@ -1,0 +1,7 @@
+[AzureAD]
+tenant_id = 
+client_id = 
+client_secret = 
+
+[Flask]
+upload_folder = /your/path/here
